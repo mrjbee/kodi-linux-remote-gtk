@@ -114,4 +114,4 @@ class EventHandler:
         elif key_code == 65:
             self.kodi.PlayPause()
         else:
-            print(key_code)
+            print(F'Unhandled key code:{key_code}')

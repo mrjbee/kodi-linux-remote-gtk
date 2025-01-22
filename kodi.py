@@ -49,11 +49,9 @@ class Kodi():
 
     def send_command_adapter(self, command_url: str):
         # newer version is no loger supporting everything over GET
-        # have to transform into POST
+        # have to transform into POST (dirty fix)
         # Url expected:http://192.168.0.114:8080/jsonrpc?request={"jsonrpc":"2.0","id":1,"method":"Player.GetActivePlayers"}
-        print(command_url)
         command_tuple = command_url.split("?request=")
-        print(command_tuple)
         response = requests.post(
             command_tuple[0],
             data=command_tuple[1],
