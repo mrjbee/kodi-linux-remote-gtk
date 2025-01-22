@@ -17,7 +17,7 @@ class Remote:
 
     def load_window(self, builder):
         window = builder.get_object("windowRemote")
-        window.set_title('KodiLinuxRemote')
+        window.set_title('Remote')
         window.show()
         # Communicate with kodi
         kodi = Kodi(self.username, self.password, self.ip_address, self.port)
